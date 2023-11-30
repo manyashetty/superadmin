@@ -1,0 +1,2 @@
+backend:         npx nodemon server
+frontend : npm start
