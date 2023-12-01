@@ -6,7 +6,8 @@ const contactController = require("../controllers/conactController")
 const feedController = require("../controllers/feedController")
 const servicesController = require("../controllers/servicesController")
 const testimonialController = require("../controllers/testimonialController")
-const {upload} = require("../middleware/multer")
+const {upload} = require("../middleware/multer");
+const {getAllMessages , postNewMessage} = require('../controllers/messageController');
 const router=express.Router()
 
 // REGISTRATION, LOGIN, LOGOUT ROUTE
@@ -47,7 +48,15 @@ router.put('/services',upload.single('service_image'), servicesController.update
 router.post('/testimonial',authenticateMiddleware,upload.single('client_image'),testimonialController.createTestimonial );
 router.get('/testimonial', authenticateMiddleware,testimonialController.getTestimonials);
 router.delete('/testimonial', testimonialController.deleteTestimonial);
-router.put('/testimonial',upload.single('client_image'), testimonialController.updateTestimonial)
+router.put('/testimonial',upload.single('client_image'), testimonialController.updateTestimonial);
+
+
+// MESSAGES
+// Get all messages
+router.get('/chat', getAllMessages);
+
+// Post a new message
+router.post('/chat', postNewMessage);
 
 module.exports=router
 
