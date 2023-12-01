@@ -4,12 +4,15 @@ import Profile from '../components/Profile';
 import Projects from '../components/Projects';
 import Navbar from "../components/Navbar";
 import Footer from '../components/Footer';
+import img from '../images/pexels-fauxels-3183150.jpg';
+
 const HomePage = () => {
   return (
     <>
     <div className="grid  grid-cols-12">
     <Navbar/>
       {/* Profile section */}
+      <img src={img} alt="img"></img>
       <div className="col-span-full ">
         <Profile />
       </div>
