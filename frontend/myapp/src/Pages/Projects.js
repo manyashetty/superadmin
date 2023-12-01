@@ -65,9 +65,9 @@ const ProjectsPage = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-gradient-to-r from-blue-200 to-blue-700">
       <Navbar />
-      <div className="container mx-auto bg-white p-10 bg-gradient-to-r from-red-100 to-red-400 flex-grow">
+      <div className="container mx-auto bg-white p-10 bg-gradient-to-r from-blue-200 to-blue-700">
         <h1 className="text-3xl font-minimal font-bold mb-4 text-center text-white">
           PROJECTS
         </h1>

@@ -75,9 +75,9 @@ const ContactPage = () => {
   }, []);
 
   return (
-    <>
+    <div className="bg-gradient-to-r from-blue-200 to-blue-700">
       <Navbar />
-      <div className="bg-white">
+      <div >
         <div className="max-w-md mx-auto mt-10 p-6 bg-crimson rounded-xl shadow-black shadow-lg mt-10 mb-10">
           <h2 className="text-2xl font-semibold mb-6 text-white">Contact Us</h2>
           {showForm ? (
@@ -139,13 +139,13 @@ const ContactPage = () => {
               <button
                 onClick={handleSubmit}
                 type="submit"
-                className="bg-white hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline bg-white"
+                className="bg-white hover:bg-blue-700 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline bg-white"
               >
                 Submit
               </button>
             </form>
           ) : (
-            <p className="text-white">Thank you for your submission!</p>
+            <p className="text-black">Thank you for your submission!</p>
           )}
         </div>
       </div>
@@ -165,7 +165,7 @@ const ContactPage = () => {
       </div>
       )}
       <Footer />
-    </>
+    </div>
   );
 };
 
