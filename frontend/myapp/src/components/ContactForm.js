@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import emailjs from 'emailjs-com';
 import Cookies from "js-cookie";
 import { jwtDecode, InvalidTokenError } from "jwt-decode";
 
@@ -33,28 +34,30 @@ const ContactPage = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
+  
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      const response = await axios.post(
-        "http://localhost:4000/contacts",
-        formData,
-        {
-          headers: {
-            Authorization: `Bearer ${accessToken}`,
-          },
-        }
-      );
 
-      alert("Form submitted successfully");
-      setShowForm(false); // Hide the form after submission
-      // You can also update the contact list after submission if needed
-    } catch (error) {
-      alert("Form was not submitted successfully");
-      console.log(error);
-    }
+    // Send email using EmailJS
+    emailjs.send(
+      'service_wv4j43r',
+      'template_mk21ele',
+      formData,
+      'Xk3prhiHrIJBBgwIK'
+    )
+    .then((response) => {
+      alert("Email sent Successfully");
+      console.log('Email sent successfully', response);
+    })
+    .catch((error) => {
+      console.error('Email sending failed', error);
+    });
+    setFormData({
+      name: '',
+      email: '',
+      message: '',
+    });
   };
-
   useEffect(() => {
     // Fetch contact form data from your API endpoint
     axios
