@@ -2,13 +2,11 @@
 import React from 'react';
 import Profile from '../components/Profile';
 import Projects from '../components/Projects';
-
 import Navbar from "../components/Navbar";
-
+import Footer from '../components/Footer';
 const HomePage = () => {
   return (
     <>
-    
     <div className="grid  grid-cols-12">
     <Navbar/>
       {/* Profile section */}
@@ -33,7 +31,7 @@ const HomePage = () => {
 
       
     </div>
-  
+    <Footer />
     </>
   );
 };

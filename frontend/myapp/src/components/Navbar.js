@@ -329,14 +329,7 @@ function Navbar() {
             </li>
             
 
-            <li>
-              <a
-                className="text-3xl hover:text-gray-200 hover:underline font-serif"
-                href="/feeds"
-              >
-                Feeds
-              </a>
-            </li>
+            
 
             <li>
               <a
@@ -401,14 +394,7 @@ function Navbar() {
           </a>
         </li>
         
-        <li>
-          <a
-            className="text-white hover:text-gray-200 hover:underline font-serif"
-            href="/feeds"
-          >
-            Feeds
-          </a>
-        </li>
+        
         <li>
           <a
             className="text-white hover:text-gray-200 hover:underline font-serif"

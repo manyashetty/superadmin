@@ -3,7 +3,7 @@ const userController = require("../controllers/userController")
 const projectController = require("../controllers/projectController")
 const {authenticateMiddleware} = require("../controllers/projectController")
 const contactController = require("../controllers/conactController")
-const feedController = require("../controllers/feedController")
+// const feedController = require("../controllers/feedController")
 const servicesController = require("../controllers/servicesController")
 const testimonialController = require("../controllers/testimonialController")
 const {upload} = require("../middleware/multer");
@@ -30,10 +30,10 @@ router.post("/contacts",authenticateMiddleware,contactController.submitContactFo
 router.get("/contacts",authenticateMiddleware,contactController.displayForm) 
 
 // FEEDS CREATION, DISPLAY, DELETE, UPDATE ROUTE
-router.post("/feeds",authenticateMiddleware,upload.single('image'),feedController.createFeeds)
-router.get("/feeds", authenticateMiddleware,feedController.getFeeds)
-router.delete("/feeds",feedController.deleteFeed)
-router.put("/feeds",upload.single('image'),feedController.updateFeed)
+// router.post("/feeds",authenticateMiddleware,upload.single('image'),feedController.createFeeds)
+// router.get("/feeds", authenticateMiddleware,feedController.getFeeds)
+// router.delete("/feeds",feedController.deleteFeed)
+// router.put("/feeds",upload.single('image'),feedController.updateFeed)
 
 
 // SERVICES CREATION, DISPLAY, DELETE, UPDATE ROUTE

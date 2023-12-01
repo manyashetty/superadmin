@@ -6,7 +6,6 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
 import { Link } from "react-router-dom";
-import vr from "../images/vr.png";
 
 const LoginForm = () => {
   const [email_id, setEmail] = useState("");
@@ -77,18 +76,13 @@ const LoginForm = () => {
     if (userRole && userRole !== undefined) {
       userRole === "superAdmin" ? navigate("/superAdmin") : navigate("/");
     }
-  }, [userRole]);
+  }, [navigate, userRole]);
 
   return (
     <>
       <Navbar />
       <div className="flex justify-center items-center bg-gradient-to-r from-red-100 to-red-400 h-screen">
         {/* Display the image above the form on mobile view */}
-        <img
-          src={vr}
-          alt="nothing"
-          className="hidden sm:block max-w-md mb-64 mr-60"
-        />
         <form className="w-full m-5 sm:w-96 bg-crimson p-6 rounded-xl shadow-black shadow-lg mb-20">
           <div className="mb-3">
             <label className="font-monospace font-bold mb-2 flex text-white">
@@ -133,7 +127,7 @@ const LoginForm = () => {
           </button>
           <Link to="/register">
             <div className="mt-4 text-center">
-              Don't have an account yet?
+              Dont have an account yet?
               <span className="text-white cursor-pointer">Register</span>
             </div>
           </Link>

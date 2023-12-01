@@ -376,7 +376,7 @@ input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   opacity: 1;
   /* 1 */
-  color: #9ca3af;
+  color: #c8d7f0;
   /* 2 */
 }
 
@@ -384,7 +384,7 @@ input::placeholder,
 textarea::placeholder {
   opacity: 1;
   /* 1 */
-  color: #9ca3af;
+  color: #c8d7f0;
   /* 2 */
 }
 
@@ -605,14 +605,14 @@ video {
 } */
 /* Decrease the opacity of the background color */
 .bg-crimson {
-  background-color: rgba(241, 34, 75, 0.918); /* Opacity is set to 0.5 */
+  background-color: rgba(26, 4, 150, 0.918); /* Opacity is set to 0.5 */
 }
 
 /* Decrease the opacity of the text color */
 .text-crimson {
-  color: rgba(220, 20, 60, 0.865); /* Opacity is set to 0.5 */
+  color: rgba(26, 4, 150, 0.918); /* Opacity is set to 0.5 */
 }
 
 .border-crimson{
-  border: 2px solid crimson;
+  border: 2px solid rgba(26, 4, 150, 0.918);;
 }

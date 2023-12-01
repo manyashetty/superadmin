@@ -7,8 +7,8 @@ import ContactForm from "./components/ContactForm";
 import Chat from "./Pages/Chat";
 import ProjectForm from "./components/ProjectForm";
 import Projects from "./Pages/Projects";
-import FeedsPage from "./Pages/Feed";
-import FeedForm from "./components/feedsForm";
+// import FeedsPage from "./Pages/Feed";
+// import FeedForm from "./components/feedsForm";
 import SuperAdminPage from "./Pages/SuperAdminPage";
 import ContactList from "./Pages/contacts";
 import Userupdate from "./components/userUpdate";
@@ -26,9 +26,6 @@ function App() {
           <Route path="/projectform" element={<ProjectForm />}></Route>
           <Route path="/projects" element={<Projects />}></Route>
           <Route path="/projects/:projectId/update" element={<ProjectForm />} />
-          <Route path="/feeds" element={<FeedsPage />}></Route>
-          <Route path="/feedform" element={<FeedForm />}></Route>
-          <Route path="/feeds/:feedId/update" element={<FeedForm />} />
           <Route path="/superAdmin" element={<SuperAdminPage />}></Route>
           <Route path="/contactspage" element={<ContactList />}></Route>
           <Route path="/user/:userId/update" element={<Userupdate />} />
