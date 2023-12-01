@@ -12,6 +12,7 @@ import Projects from "./Pages/Projects";
 import SuperAdminPage from "./Pages/SuperAdminPage";
 import ContactList from "./Pages/contacts";
 import Userupdate from "./components/userUpdate";
+import Profile from "./components/Profile";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/superAdmin" element={<SuperAdminPage />}></Route>
           <Route path="/contactspage" element={<ContactList />}></Route>
           <Route path="/user/:userId/update" element={<Userupdate />} />
+          <Route path="/profile" element={<Profile/>} />
         </Routes>
       </BrowserRouter>
     </>

@@ -344,6 +344,7 @@ function Navbar() {
             </li>
 
             {accessToken ? (
+              <>
               <li>
                 <button
                   className="text-3xl bg-white text-crimson hover:text-gray-200 hover:underline font-serif"
@@ -352,6 +353,11 @@ function Navbar() {
                   Logout
                 </button>
               </li>
+              <li>
+                <a className="bg-white  hover:bg-cyan-600 text-crimson font-bold py-2 px-4 rounded-full shadow-2xl"
+                href="/chat">Chat</a>
+                </li>
+              </>
             ) : (
               <>
                 <li>
@@ -407,14 +413,20 @@ function Navbar() {
           </a>
         </li>
         {accessToken ? (
-          <li>
-            <button
-              className="bg-white hover:bg-cyan-600 text-crimson font-bold py-2 px-4 rounded-full shadow-2xl"
-              onClick={handleLogout}
-            >
-              Logout
-            </button>
-          </li>
+         <>
+         <li>
+           <button
+             className="text-3xl bg-white text-crimson hover:text-gray-200 hover:underline font-serif"
+             onClick={handleLogout}
+           >
+             Logout
+           </button>
+         </li>
+         <li>
+           <a className="bg-white  hover:bg-cyan-600 text-crimson font-bold py-2 px-4 rounded-full shadow-2xl"
+           href="/chat">Chat</a>
+           </li>
+         </>
         ) : (
           <>
             <li>

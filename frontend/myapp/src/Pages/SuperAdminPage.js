@@ -80,7 +80,7 @@ const SuperAdminPage = () => {
         <div className="container mx-auto p-2">
           <div className="md:flex items-center justify-between ">
             <h1 className="text-2xl text-white md:text-5xl flex-1 text-center md:text-left">
-              SUPER ADMIN PANEL
+              LEADER PANEL
             </h1>
             <div className="flex items-center">
               <button
@@ -113,13 +113,13 @@ const SuperAdminPage = () => {
                     className="mr-2 px-4 py-2 text-white bg-green-500 rounded hover:bg-green-600"
                     onClick={() => handlePromote(user._id)}
                   >
-                    Promote
+                    Give Access
                   </button>
                   <button
                     className="px-4 py-2 text-white bg-red-500 rounded hover:bg-red-600"
                     onClick={() => handleDemote(user._id)}
                   >
-                    Demote
+                    Remove Access
                   </button>
                 </div>
               </div>
