@@ -220,7 +220,6 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
-import logo from "../images/logo.png";
 import Cookies from "js-cookie";
 
 const accessToken = Cookies.get("accessToken");
@@ -300,13 +299,7 @@ const UserForm = () => {
       <Navbar />
       <div className="bg-gradient-to-r from-red-100 to-red-400 h-screen flex flex-col justify-center items-center">
         {/* Circular component for company logo */}
-        <div className="bg-white rounded-full h-20 w-80 flex items-center justify-center mb-8">
-          <img
-            src={logo}
-            alt="Company Image"
-            className="w-40 h-40 rounded-lg mb-4"
-          />
-        </div>
+        
 
         {/* Heading */}
         <h1 className="text-4xl font-bold text-crimson mb-8">

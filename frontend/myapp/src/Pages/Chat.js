@@ -98,9 +98,10 @@ const Chat = () => {
   };
 
   return (
-    <div>
+    <div className=''>
     <Navbar />
-    <div className="container mt-5 mb-5">
+    <div className='bg-white min-h-screen bg-gradient-to-r  from-blue-200 to-blue-700 flex items-center justify-center  '>
+    <div className="container mt-5 mb-5 ">
       <Card>
         <Card.Body>
           <Form onSubmit={handleSubmit}>
@@ -131,6 +132,7 @@ const Chat = () => {
           ))}
         </ListGroup>
       </Card>
+    </div>
     </div>
     <Footer />
     </div>

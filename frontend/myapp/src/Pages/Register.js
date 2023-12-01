@@ -5,7 +5,6 @@ import Footer from "../components/Footer";
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import ar from "../images/ar.png"
 import { Link } from "react-router-dom";
 
 const Registration = () => {
@@ -74,14 +73,9 @@ const Registration = () => {
   return (
     <>
       <Navbar />
-      <div className="bg-white min-h-screen bg-gradient-to-r from-red-100 to-red-400 flex items-center justify-center  ">
+      <div className="bg-white min-h-screen bg-gradient-to-r  from-blue-200 to-blue-700 flex items-center justify-center  ">
         {/* Display the image above the form on mobile view */}
-        <img
-          src={ar}
-          alt="nothing"
-          className="hidden md:block max-w-7xl mb-6"
-          
-        />
+        
         <div className="bg-crimson p-10 rounded-xl shadow-black shadow-lg md:w-96 md:mb-5 lg:w-1/3 w-full mb-6 mt-15 m-5">
           <h2 className="text-2xl font-bold mb-4 text-white">Register</h2>
 

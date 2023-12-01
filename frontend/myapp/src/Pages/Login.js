@@ -81,7 +81,7 @@ const LoginForm = () => {
   return (
     <>
       <Navbar />
-      <div className="flex justify-center items-center bg-gradient-to-r from-red-100 to-red-400 h-screen">
+      <div className="flex justify-center items-center bg-gradient-to-r from-blue-200 to-blue-700 h-screen">
         {/* Display the image above the form on mobile view */}
         <form className="w-full m-5 sm:w-96 bg-crimson p-6 rounded-xl shadow-black shadow-lg mb-20">
           <div className="mb-3">

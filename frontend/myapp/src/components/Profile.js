@@ -127,8 +127,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import imageSm from "../images/imageSm.jpeg";
-import imageLg from "../images/imageLg.jpeg";
 import Cookies from "js-cookie";
 import { jwtDecode, InvalidTokenError } from "jwt-decode";
 
@@ -185,21 +183,6 @@ const Profile = () => {
 
   return (
     <div className="relative">
-      {isSmallScreen ? (
-        <img
-          className="mx-auto max-w-full h-auto"
-          style={{
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            zIndex: "-1",
-          }}
-          src={imageLg}
-          alt="imagLg"
-        />
-      ) : (
-        <img className="mx-auto w-full h-auto " src={imageSm} alt="imageSm" />
-      )}
       <div
         className={`${
           isSmallScreen ? "text-center" : "text-left"

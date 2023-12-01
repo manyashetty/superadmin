@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
-import logo from "../images/logo.png";
+
 
 const SuperAdminPage = () => {
   const [users, setUsers] = useState([]);
@@ -83,11 +83,6 @@ const SuperAdminPage = () => {
               SUPER ADMIN PANEL
             </h1>
             <div className="flex items-center">
-              <img
-                src={logo}
-                alt="Company Image"
-                className="w-40 h-40 rounded-lg md:mr-96 mr-60"
-              />
               <button
                 className="bg-white text-crimson font-bold py-2 px-4 rounded-full shadow-2xl ml-4"
                 onClick={handleLogout}
